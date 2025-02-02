@@ -1,0 +1,204 @@
+@import "assets/styles/global";
+
+.tools {
+    background-color: #f1f1f1
+    margin-top: -16rem
+    padding-top: 32rem
+}
+
+.title_box {
+    text-align: center
+}
+
+.title {
+    display inline-block
+    font-size: 3.5rem
+    text-transform: uppercase
+    font-weight: 700
+    background-image: linear-gradient(to right, color_primary_light, color_primary_dark)
+    background-clip: text
+    color: transparent
+    transition: transform .2s
+    
+    &:hover {
+        transform: skew(15deg, -2deg) scale(1.1)
+        text-shadow: .5rem 1rem 2rem rgba(0, 0, 0, .2)
+    }
+}
+
+.cardrow {
+    width: 114rem
+    margin: 0 auto
+    gap: 4rem
+    padding: 16rem 0 0
+    display flex
+    justify-content: space-between
+}
+
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem;
+    width 52rem
+
+    .side {
+        height: 52rem;
+        width  52rem
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(black, .15);
+
+        &_front {
+            background-color: #fff
+        }
+
+        &_back {
+            transform: rotateY(-180deg);
+
+            &_1 {
+                background-image: linear-gradient(to right bottom, color_secondary_light, color_secondary_dark);
+            }
+
+            &_2 {
+                background-image: linear-gradient(to right bottom, color_primary_light, color_primary_dark);
+            }
+
+            &_3 {
+                background-image: linear-gradient(to right bottom, color_tertiary_light, color_tertiary_dark);
+            }
+        }
+        
+    }
+
+    &:hover .side_front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .side_back {
+        transform: rotateY(0);
+    }
+}
+
+.picture {
+    background-size: cover
+    height: 23rem
+    background-blend-mode: screen
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%)
+    border-top-left-radius: 3px
+    border-top-right-radius: 3px
+
+    &_1 {
+        background-image: linear-gradient(to right bottom, color_secondary_light, color_secondary_dark), url("assets/img/nat-5.jpg")
+    }
+
+    &_2 {
+        background-image: linear-gradient(to right bottom, color_primary_light, color_primary_dark), url("assets/img/nat-6.jpg")
+    }
+
+    &_3 {
+        background-image: linear-gradient(to right bottom, color_tertiary_light, color_tertiary_dark), url("assets/img/nat-7.jpg")
+    }
+}
+
+
+.heading {
+    font-size: 2.8rem
+    font-weight: 300
+    color: #fff
+    text-align: right
+    position: absolute
+    top: 12rem
+    right: 2rem
+    width: 60%
+
+    &_span {
+        padding: 1rem 1.5rem
+        box-decoration-break: clone
+
+        &_1 {
+            background-image: linear-gradient(to right bottom, rgba(color_secondary_light, .85), rgba(color_secondary_dark, .85))
+        }
+
+        &_2 {
+            background-image: linear-gradient(to right bottom, rgba(color_primary_light, .85), rgba(color_primary_dark, .85))
+        }
+
+        &_3 {
+            background-image: linear-gradient(to right bottom, rgba(color_tertiary_light, .85), rgba(color_tertiary_dark, .85))
+        }
+    }
+}
+
+.details {
+    padding: 3rem
+    margin: 0 auto
+
+    ul {
+        list-style: none
+        width: 85%
+        margin: 0 auto
+
+        li {
+            text-align: center
+            font-size: 1.5rem
+            padding: 1rem
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #ccc
+            }
+        }
+    }
+}
+
+.price {
+    display flex
+    align-items: center
+    justify-content: center
+    text-align: center
+        width 100%
+        height 100%
+
+    &_box {
+        margin-bottom: 8rem
+        color: #fff
+    }
+
+    &_only {
+        font-size: 2.2rem
+        text-transform: uppercase
+    }
+
+    &_value {
+        font-size: 6rem
+        font-weight: 100
+    }
+}
+
+.book_button {
+    display block
+    font-size: 2rem
+    text-decoration: none
+    color: #000
+}
+
+
+.bottom_box {
+    display flex
+    padding: 10rem
+
+    .bottom_button {
+        font-size: 2rem
+        display inline-block
+        margin: 0 auto
+        color: #fff
+        background-color: color_primary
+    }
+}

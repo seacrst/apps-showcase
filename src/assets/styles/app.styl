@@ -1,0 +1,136 @@
+@import "assets/styles/global.styl";
+@import "./components.styl";
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font: 400 1rem/1.6 "Lato", sans-serif;
+    color: #777;
+    padding: 30px;
+}
+
+.icon {
+    display inline-block
+    font-size: 6rem
+    margin-bottom 5px
+    background-image: linear-gradient(to right, color_primary_light, color_primary_dark)
+    background-clip: text
+    color: transparent
+}
+
+
+@keyframes move_in_left {
+    0% {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+
+    80% {
+        transform: translateX(12px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes move_in_right {
+    0% {
+        opacity: 0;
+        transform: translate(120px, 40px) rotate(-10deg);
+    }
+
+    80% {
+        transform: translateX(-12px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate(0) ;
+    }
+}
+
+@keyframes move_in_bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate(0) ;
+    }
+}
+
+
+.b, .b:link, .b:visited {
+    display: inline-block;
+    margin-top: 80px;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition:  transform .2s;
+    position: relative;
+    animation: move_in_bottom .6s .7s;
+    animation-fill-mode: backwards;
+}
+
+.b:hover, .b:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.b:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.b::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform .4s, opacity .4s;
+}
+
+
+.b:hover::after {
+    transform: scale(1.4);
+    opacity: 0;
+}
+
+.b-white {
+    background-color: #fff;
+    color: #777;
+    border-radius: 50px;
+}
+
+.b-white::after {
+    background-color: #fff;
+}
+
+
+.b-dark {
+    background-color: color_primary;
+    color: #777;
+    border-radius: 50px;
+}
+
+.b-dark::after {
+    background-color: color_primary;
+}

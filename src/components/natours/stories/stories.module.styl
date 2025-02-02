@@ -1,0 +1,117 @@
+@import "assets/styles/global"
+
+.stories {
+    // background-color: rgba(#f1f1f1, .1)
+    padding: 15rem 0
+    position relative
+}
+
+.header {
+    margin-bottom: 10rem
+    text-align: center
+
+    .title {
+        display inline-block
+        font-size: 3.5rem
+        text-transform: uppercase
+        font-weight: 700
+        background-image: linear-gradient(to right, color_primary_light, color_primary_dark)
+        background-clip: text
+        color: transparent
+        transition: transform .2s
+
+        &:hover {
+            transform: skew(15deg, -2deg) scale(1.1)
+            text-shadow: .5rem 1rem 2rem rgba(0, 0, 0, .2)
+        }
+    }
+}
+
+.story {
+    width: 70%
+    margin: 0 auto
+    box-shadow: 0 3rem 6rem rgba(black, .2)
+    background-color: rgba(#fff, .6)
+    border-radius: 3px
+    padding: 6rem
+    padding-left: 8rem
+    font-size: text_size
+    overflow: hidden;
+    transform: skewX(-12deg)
+
+    &:nth-child(2) {
+        margin: 4rem auto
+    }
+
+    & > * {
+        transform: skewX(12deg)
+    }
+
+    &_heading {
+        text-transform: uppercase
+    }
+
+    &:hover .caption {
+        opacity 1
+        transform: translate(-50%, -50%)
+    }
+
+    &:hover .img {
+        // transform: scale(1)
+        filter: blur(3px)
+    }
+}
+
+.shape {
+    width 15rem
+    height 15rem
+    float: left
+    shape-outside: circle(50% at 50% 50%)
+    clip-path: circle(50% at 50% 50%)
+    transform: translateX(-2rem) skewX(12deg)
+    position relative
+    // will-change: transform
+}
+
+.caption {
+    transition: opacity .5s, transform .5s
+    backface-visibility: hidden
+    position absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -20%)
+    color: #fff
+    font-size: 2.4rem
+    text-transform: uppercase
+    text-align: center
+    opacity 0
+}
+
+.img {
+    width 100%
+    height 100%
+    // transform: scale(1.3)
+    transition: transform .5s
+    // will-change: transform 
+}
+
+
+.link_button {
+    text-align: center
+}
+
+.bg_video {
+    position absolute
+    top: 0
+    left: 0
+    width 100%
+    height 100%
+    z-index: -1
+    opacity .15
+
+    .video {
+        width 100%
+        height 100%
+        object-fit: cover
+    }
+}
