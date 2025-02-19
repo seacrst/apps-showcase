@@ -1,0 +1,145 @@
+@import "assets/styles/global"
+
+.menu {
+
+}
+
+.checkbox {
+    display none
+}
+
+.checkbox:checked ~ .bg {
+    transform: scale(100)
+}
+
+.checkbox:checked ~ .menu_nav {
+    width: 100%
+    opacity: 1
+}
+
+.bt {
+    background-color: #fff
+    width: 7rem
+    height: 7rem
+    position fixed
+    top: 6rem
+    right: 6rem
+    border-radius: 50%
+    z-index: 12
+    cursor pointer
+    text-align: center
+}
+
+.bg {
+    height: 6rem
+    width: 6rem
+    border-radius: 50%
+    position: fixed
+    top: 6.5rem
+    right: 6.5rem
+    background-image: radial-gradient(color_primary_light, color_primary_dark)
+    z-index: 10
+    box-shadow: 0 1rem 3rem rgba(#000 .1)
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1)
+}
+
+.menu_nav {
+    height: 100dvh
+    width: 0
+    opacity: 0
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 11
+    transition: opacity .8s cubic-bezier(0.68, -0.55, 0.256, 1.55), width .8s cubic-bezier(0.68, -0.55, 0.256, 1.55)
+    
+    .menu_list {
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        list-style none
+        text-align: center
+    }
+}
+
+
+.menu_item {
+    margin: 1rem
+
+    .menu_link {
+        &:link, &:visited {
+            display inline-block
+            padding: 1rem 2rem
+            font-size: 3rem
+            font-weight: 300
+            color: #fff
+            text-decoration: none
+            text-transform: uppercase
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%  )
+            background-size: 220%
+            transition: background-position .4s, transform .4s
+
+            & span {
+                margin-right: 1.5rem
+                display inline-block
+            }
+        }
+
+        &:hover, &:active {
+            background-position: 100%
+            color: color_primary
+            transform: translateX(1rem)
+        }
+    }
+}
+
+.nav_icon {
+    position: relative
+    margin-top: 3.5rem
+
+    &, &::before, &::after {
+        display: inline-block
+        background: #333333
+        height: 2px
+        width: 3rem
+    }
+
+    &::before, &::after {
+        transition: all .2s
+        content: ""
+        display: inline-block
+        position: absolute
+        left: 0
+    }
+
+    &::before {
+        top: -.8rem
+    }
+
+    &::after {
+        top: .8rem
+    }
+}
+
+.bt:hover .nav_icon::before {
+    top: -1rem
+}
+
+.bt:hover .nav_icon::after {
+    top: 1rem
+}
+
+.checkbox:checked ~ .bt .nav_icon {
+    background-color: transparent
+}
+
+.checkbox:checked ~ .bt .nav_icon::before {
+    top: 0
+    transform: rotate(135deg)
+}
+
+.checkbox:checked ~ .bt .nav_icon::after {
+    top: 0
+    transform: rotate(-135deg)
+}

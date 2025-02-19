@@ -1,0 +1,63 @@
+@import "assets/styles/global"
+
+.footer {
+    background-color: #333
+    padding: 10rem
+    font-size: 1.4rem
+}
+
+.logo_box {
+    text-align: center
+    margin-bottom: 8rem
+
+    .logo_img {
+        width 15rem
+        height auto
+    }
+}
+
+.row {
+    width: 114rem
+    margin: 0 auto
+    display flex
+    display flex
+    justify-content: space-between
+
+    .nav {
+
+        border-top: 1px solid #eee
+        padding-top 2rem
+        display inline-block
+    }
+}
+
+.list {
+    .item {
+        display inline-block
+
+        &:not(:last-child) {
+            margin-right: 1.5rem
+        }
+    }
+}
+
+.link, .link:visited {
+    text-decoration: none
+    color: color_gray_light
+    text-transform: uppercase
+    display inline-block
+    transition: transform .2s
+}
+
+.link:hover, .link:active {
+    color: color_primary
+    box-shadow: 0 1rem 2rem rgba(#000, .4)
+    transform: rotate(5deg) scale(1.2)
+}
+
+.copyright {
+    display inline-block
+    border-top: 1px solid color_gray_light
+    padding-top: 2rem
+    color: color_gray_light
+}
