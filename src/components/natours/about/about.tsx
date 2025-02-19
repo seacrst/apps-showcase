@@ -15,7 +15,6 @@ const About = () => (
                 <h3 className={styl.box_title}>You're going to fall in love with nature</h3>
                 <p className={styl.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic porro debitis mollitia illum. Minus architecto sed voluptatibus qui inventore impedit culpa veritatis doloribus quisquam nesciunt, deleniti obcaecati quidem maxime ratione?</p>
 
-
                 <h3 className={styl.box_title}>Live adventures like you never have before</h3>
                 <p className={styl.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam quo eos vel esse excepturi nemo libero nostrum, consectetur dolorem incidunt doloremque amet neque, recusandae odit. Harum laudantium excepturi molestiae? Quaerat.</p>
 

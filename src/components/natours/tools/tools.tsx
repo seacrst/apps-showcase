@@ -7,7 +7,7 @@ const Tools = () => (
             <h2 className={styl.title}>Most popular tours</h2>
         </div>
 
-        <div className={styl.cardrow}>
+        <div className={styl.cardrow} id="tours">
             <div className={styl.card}>
                 <article className={cn(styl.side, styl.side_front, styl.side_front_1)}>
                     <div className={cn(styl.picture, styl.picture_1)}></div>
@@ -32,7 +32,7 @@ const Tools = () => (
                         <div className={styl.price_box}>
                             <p className={styl.price_only}>Only</p>
                             <p className={styl.price_value}>$298</p>
-                            <a href="#" className={`${styl.book_button} b b-white`}>Book now</a>
+                            <a href="#popup" className={`${styl.book_button} b b-white`}>Book now</a>
                         </div>
                     </div>
                 </article>
@@ -62,7 +62,7 @@ const Tools = () => (
                         <div className={styl.price_box}>
                             <p className={styl.price_only}>Only</p>
                             <p className={styl.price_value}>$498</p>
-                            <a href="#" className={`${styl.book_button} b b-white`}>Book now</a>
+                            <a href="#popup" className={`${styl.book_button} b b-white`}>Book now</a>
                         </div>
                     </div>
                 </article>
@@ -92,7 +92,7 @@ const Tools = () => (
                         <div className={styl.price_box}>
                             <p className={styl.price_only}>Only</p>
                             <p className={styl.price_value}>$898</p>
-                            <a href="#" className={`${styl.book_button} b b-white`}>Book now</a>
+                            <a href="#popup" className={`${styl.book_button} b b-white`}>Book now</a>
                         </div>
                     </div>
                 </article>

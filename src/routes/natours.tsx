@@ -4,12 +4,14 @@ import Features from "src/components/natours/features/features";
 import { Footer } from "src/components/natours/footer/footer";
 import Header from "src/components/natours/header/header";
 import { Menu } from "src/components/natours/menu/menu";
+import { Modal } from "src/components/natours/modal/modal";
 import Stories from "src/components/natours/stories/stories";
 import Tools from "src/components/natours/tools/tools";
 
 const Natours = () => (
     <>
         <Menu/>
+        <Modal/>
         <Header/>
         <main>
             <About/>
